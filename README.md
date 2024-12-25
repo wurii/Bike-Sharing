@@ -14,12 +14,12 @@ pip install -r requirements.txt
 ## Project Structure
 ```
 bike-sharing-dashboard/
-├── app.py              # Main dashboard file
-├── requirements.txt    # Dependencies
-├── README.md          # Documentation
-└── data/              # Data directory
-    ├── day.csv        # Daily bike rental data
-    └── hour.csv       # Hourly bike rental data
+├── app.py              
+├── requirements.txt    
+├── README.md         
+└── data/              
+    ├── day.csv        
+    └── hour.csv      
 ```
 
 ## Dependencies (requirements.txt)
