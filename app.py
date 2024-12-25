@@ -63,22 +63,25 @@ st.markdown("""
 
 @st.cache_data
 def load_data():
-    day_df = pd.read_csv('day.csv')
-    hour_df = pd.read_csv('hour.csv')
-
+    day_df = pd.read_csv('data/day.csv')    # Ubah path
+    hour_df = pd.read_csv('data/hour.csv')   # Ubah path
+    
+    # Convert dates
     day_df['dteday'] = pd.to_datetime(day_df['dteday'])
     hour_df['dteday'] = pd.to_datetime(hour_df['dteday'])
-
+    
+    # Create mappings
     season_map = {1: 'Winter', 2: 'Spring', 3: 'Summer', 4: 'Fall'}
     weather_map = {1: 'Clear', 2: 'Mist', 3: 'Light Rain/Snow', 4: 'Heavy Rain/Snow'}
-    weekday_map = {0: 'Sunday', 1: 'Monday', 2: 'Tuesday', 3: 'Wednesday',
+    weekday_map = {0: 'Sunday', 1: 'Monday', 2: 'Tuesday', 3: 'Wednesday', 
                    4: 'Thursday', 5: 'Friday', 6: 'Saturday'}
-
+    
+    # Apply mappings
     for df in [day_df, hour_df]:
         df['season'] = df['season'].map(season_map)
         df['weathersit'] = df['weathersit'].map(weather_map)
         df['weekday'] = df['weekday'].map(weekday_map)
-
+    
     return day_df, hour_df
 
 
