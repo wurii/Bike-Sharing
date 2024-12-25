@@ -52,7 +52,7 @@ st.markdown("""
 
 st.markdown("""
     <h1 style='text-align: center; color: #4e89ae; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);'>
-        🚲 BIKE SHARING STATISTIC
+        🚲 BIKE SHARING STATISTICS
     </h1>
     <p style='text-align: center; color: #666; font-style: italic;'>
         
